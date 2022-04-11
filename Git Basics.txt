@@ -107,6 +107,8 @@ branch is by default : master (main branch)
 
 -->git add --a : all files will be sent to stagging area.
 
+-->git add "file1" : file1 will be send to stagging area.
+
 now after commiting there comes a snapshot of the files.
 
 -->git commit --m "message" : commit the files in the stagging area.
