@@ -96,6 +96,33 @@ area
 3. git directory(repository) : .git folder contain the compressed data
 git takes the reponsiblity of putting the the files that you want in the working
 directory.
+------------------------------------------------------------------------------------
+-->git status : 
+
+-->git init : initialised a new empty git repo.
+means the folder has been made a git repository.
+now git tracks the repo.
+
+branch is by default : master (main branch)
+
+-->git add --a : all files will be sent to stagging area.
+
+now after commiting there comes a snapshot of the files.
+
+-->git commit --m "message" : commit the files in the stagging area.
+
+-->git log : tells all the commits you made.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
