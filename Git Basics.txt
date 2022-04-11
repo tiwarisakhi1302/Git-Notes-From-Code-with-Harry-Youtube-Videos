@@ -1,0 +1,107 @@
+why is git around?
+git is version control system.
+
+Remote origin
+server that saves our codes
+so that different persons can pull our code.
+git push : sending code to internet
+git pull : recieving the code from internet.
+
+->Helps to keep track of the changes(versions).
+->easily recover files.
+->Who introduced a issue and when.
+->roll back to previously working state.
+
+history
+-------
+1. local VCS : the changes remain in the local computer(hard disk).
+   If the pc got damaged then all the data will be lost.
+   advn : you can roll back.
+2. Centralised VCS : There is a server. Many people can collaborate they pull files
+   after finishing they push the project. The server is the master, the copy on the
+   centralised server is the final copy of the project.
+   files can be recovered from centralised server.
+   disadvn : if the server got damaged the data will be lost. But there is copy
+   of the data is there with user so less data will get lost.
+3. Distributed VCS : There is a centralised server and many people are collaborating
+   here the history of the files is there with every user.(full repository)
+   There is whole backup with the users. so dependency on server is less.
+   Here after so many changes the size of the repository will increased. so we want
+   that size to increase a least.
+   Ex : Git
+
+How was git created ?
+1991 - 2002 : development of linux
+In 2002, developers of linux operating system realised the importance of VCS
+In, 2002 the started using the bitkeeper named VCS. There is no git at that time.
+2005 : controversy happens the owners of bitkeeper said now bitkeeper cannot be free
+there are charges on using it.
+so linus storevald developed git.
+
+github : manages git repository.
+gitlab, bitbucket is like github.
+they are used for hosting git projects.
+
+Features of Git:
+1. Captures the snapshot not differences.
+.git folder : history of project(hidden folder)
+we can get the particular version.
+2. Almost every operation is local(no need of internet)
+you dont need to push in any server.
+Just when you feel now my work is complete you can push the files in github(remote
+repository).
+3. git has integrity.
+it is not like that if any random person makes some changes and they get reflected on
+the your repository.
+here git finds the SHA 1-check sum of all the changes.
+SHA 1-check sum : if some minute change has been made on the fils it will be changed
+if the check sum is same so it is not changed.
+integrity means no one can change the files. if someone changes then git will let know
+about the changes.
+4. git generally adds data
+
+--------------------------------------------------------------------------------------
+git bash / powershell is a terminal matches with linux
+git bash takes linux type path.
+
+commands :
+-->git
+
+-->pwd : present working directory
+
+-->cd 
+   
+-->git config --global user.name "sakshi" user.email "tiwarisakshi1302@gmail.com"
+   defines user of the project and the changes will be reflected by your name.
+
+-->git congig username
+   we can check the username over here.
+--------------------------------------------------------------------------------------
+you made a folder and there are several files there.
+you made a version 1 that is perfectly working.
+Then you made snapshot and saves the moment.
+commit 1 : working v1
+Then you changed some files in the folder. But there is one file there come some 
+errors but other files are working.
+commit 2 :so you want that in new snapshot you take new files that are working fine and 
+the old file of the file that got some error.
+
+To solve this problem the three stage architecture of git is made.
+we have three types of areas.
+1. working directory : files that are seen in windows.
+from this area we put some files in the stagging area.
+2. stagging area : files that you want to go to new commit.
+If you dont want to put some files in next commit so dont put that files in stagging
+area
+3. git directory(repository) : .git folder contain the compressed data
+git takes the reponsiblity of putting the the files that you want in the working
+directory.
+
+
+
+
+
+
+
+
+
