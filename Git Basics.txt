@@ -192,9 +192,128 @@ area.
 
 ------------------------------------------------------------------------------------
 
+Ignoring the stagging area 
 
+-->git commit -a -m "Direct commit"
 
+By using this command there is no need to use the add and commit command 
+seperately.
+But the untracked file do not go in commit.
+You need to seperately add the untracked file.
 
+--------------------------------------------------------------------------------
+
+Moving and Renaming the git files.
+
+If you rename certain tracked ex new.txt to new1.txt file git will say that you have deleted 
+new.txt and made new file new1.txt.
+but if we add the file in stagging area then git will know the file is renamed.
+
+-->git rm new.txt : Removing third new.txt file and it will be automatically stagged.
+
+-->git mv new.txt new1.txt : Rename the new.txt to new1.txt and the it will be automatically stagged.
+
+If we tarcking some files for some time but now we want to add the file in gitignore
+to ignore it. So we add it in .gitignore but here git will continue tracking
+till we explicitly untrack the file.
+-->git rm --cached new.txt
+Now for git new.txt is deleted but it will remain in our working tree.
+But we have putted the file in gitignore it will not be seen as untracked.
+
+---------------------------------------------------------------------------------
+
+How to view the commits?
+-->git log
+
+-->git log -p : this will show the changes in the particular files also.
+
+-->git log -p -n : this will show the n initial commits along with their diff
+
+-->git log --stat : short summary of the commits
+
+-->git log --pretty=short : 1 commit in 1 line
+
+-->git log --since=2.days : commits since 2 days
+
+-->git log --since=2.weeks : commits since 2 weeks
+
+-->git log --pretty=format"%h -- %ae" 
+
+Merging the changes in the previous commits
+-->git commit --amend
+press i for changing things
+press esc then wq:
+
+------------------------------------------------------------------------------------------
+Unstagging the files
+
+-->git restore --staged file_name
+
+If we have deleted some info that we needed so want to unmodify the changes and go to 
+previous commit
+
+-->git checkout -- file_name
+
+-->git checkout -f : all the files will be changed same a previous commit.
+
+------------------------------------------------------------------------------------------
+
+-->git remote add origin https://github.com/tiwarisakhi1302/Java-Script-Projects.git
+
+git remote add klrdo ek url ko jiska naam origin ha
+
+origin is name of the url
+
+url shows the website where our repository is there
+
+-->git remote : tells about all the remotes
+
+-->git remote -v : links for pushing and pulling
+
+-->git push -u origin master : 
+This will show a error as permission denied. If you have the permission then anyone can change
+the repo.
+so add a ssh key : 
+
+$ ssh-keygen -t ed25519 -C "your_email@example.com"
+press enter till the command is over.
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_ed25519
+$ tail ~/.ssh/id_ed25519
+$ tail ~/.ssh/id_ed25519.pub
+This command will generate the key
+Paste the key in the ssh key
+
+Then the key will be generated.
+
+Now If you want to make a new Repository
+
+$ echo "# Java-Script-Projects" >> README.md
+$ git init
+$ git add README.md
+$ git commit -m "initial commit"
+$ git remote add origin git@github.com:tiwarisakhi1302/Java-Script-Projects.git
+$ git branch -M main
+$ git push origin main
+
+If you have add new files in the folder ex new.txt and wanted to add this file in remote
+repo
+$ git add "new.txt"
+$ git commit --m "commit 1"
+$ git push origin main
+
+Then the file will be added to repository
+
+-------------------------------------------------------------------------------------------
+
+git alias
+
+alias : nickname to the command
+
+$ git config --global alias.st status
+
+$ git st
+This command will be same as git status
 
 
 
