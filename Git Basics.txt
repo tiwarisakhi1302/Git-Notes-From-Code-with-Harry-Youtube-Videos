@@ -97,7 +97,7 @@ area
 git takes the reponsiblity of putting the the files that you want in the working
 directory.
 ------------------------------------------------------------------------------------
--->git status : 
+-->git status : Shows if this folder is already a git repository or not.
 
 -->git init : initialised a new empty git repo.
 means the folder has been made a git repository.
@@ -105,7 +105,7 @@ now git tracks the repo.
 
 branch is by default : master (main branch)
 
--->git add --a : all files will be sent to stagging area.
+-->git add --a : all files will be sent to stagging area.(or -->git add.)
 
 -->git add "file1" : file1 will be send to stagging area.
 
@@ -114,6 +114,87 @@ now after commiting there comes a snapshot of the files.
 -->git commit --m "message" : commit the files in the stagging area.
 
 -->git log : tells all the commits you made.
+
+-->git clone repo link : command for cloning the repository
+   ssh link for remote repository 
+   https link for simply add all data of repo to your repo
+if you need new folder for this repository then use . at the last
+
+-----------------------------------------------------------------------------------
+
+As a part of software the log gets generated, but we dont have any benefit 
+from it so we want to ignore it.
+so we can make a .gitignore file inside our folder.
+
+If we add error.log file inside .gitignore file it will not be tracked
+it will be ignored.
+
+If we change something in error.log it will not been shown in git bash.
+
+-If we write *.log inside the gitignore file all the log files will be ignored.
+
+-If we write dir/ inside the gitignore the dir folder will not be tracked.
+Thios will ignore all dir folder.
+
+-If we want to ignore the outer dir folder write /dir/ inside the .gitignore.
+
+-If we want to ignore static/dir then write static/dir inside .gitignore.
+
+-----------------------------------------------------------------------------------
+
+When we modify a file and add in stagging area using git add command then
+it will seen as modified as well as to be commit by using git status command.
+
+git diff compares the working directory with the stagging area.
+
+
+HP@DESKTOP-C4K41EU MINGW64 ~/OneDrive/Desktop/Git Hub (master)
+$ git add .
+
+HP@DESKTOP-C4K41EU MINGW64 ~/OneDrive/Desktop/Git Hub (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Git Basics.txt
+        new file:   new.txt
+
+
+HP@DESKTOP-C4K41EU MINGW64 ~/OneDrive/Desktop/Git Hub (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Git Basics.txt
+        new file:   new.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   new.txt
+
+
+HP@DESKTOP-C4K41EU MINGW64 ~/OneDrive/Desktop/Git Hub (master)
+$ git diff
+diff --git a/new.txt b/new.txt
+index 4011030..9499799 100644
+--- a/new.txt
++++ b/new.txt
+@@ -1 +1 @@
+-sakshi
+\ No newline at end of file
++sakshi Tiwari
+\ No newline at end of file
+
+
+--> git diff --staged : compares the previous commit with the present stagging 
+area.
+
+------------------------------------------------------------------------------------
+
+
+
+
 
 
 
