@@ -288,13 +288,12 @@ Then the key will be generated.
 
 Now If you want to make a new Repository
 
-$ echo "# Java-Script-Projects" >> README.md
 $ git init
-$ git add README.md
-$ git commit -m "initial commit"
 $ git remote add origin git@github.com:tiwarisakhi1302/Java-Script-Projects.git
 $ git branch -M main
-$ git push origin main
+$ git add .
+$ git commit -m "initial commit"
+$ git push -f origin main
 
 If you have add new files in the folder ex new.txt and wanted to add this file in remote
 repo
